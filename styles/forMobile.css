@@ -19,20 +19,23 @@
   header nav li {
     background-color: rgb(246, 244, 242);
     border-radius: 12px;
-    margin: 10px;
+    margin: 7px;
     padding: 3px 7px;
     width: 300px;
     text-align: center;
+
   }
 
   header nav li:first-child {
-    background: rgba(0, 0, 0, 0);
+    padding: 20px 0;
+    height: 45px;
+    margin-top: 0;
   }
 
   header nav img {
-    position: absolute;
-    left: 10px;
-    top: 0px;
+    width: 6.3vh;
+    border-radius: 14px;
+    margin-left: -10vw;
   }
 
   /* Фото */
