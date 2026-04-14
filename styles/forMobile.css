@@ -1,0 +1,90 @@
+@media screen and (max-width: 748px) {
+    /* Шапка */
+  header {
+    padding: 5px;
+  }
+
+  header nav {
+    height: 25vh;
+    border-radius: 8px;
+    background-size: 100%;
+  }
+
+  header nav ul {
+    height: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  header nav li {
+    background-color: rgb(246, 244, 242);
+    border-radius: 12px;
+    margin: 10px;
+    padding: 3px 7px;
+    width: 300px;
+    text-align: center;
+  }
+
+  header nav li:first-child {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  header nav img {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+  }
+
+  /* Фото */
+
+  .photoContainer img { 
+    width: 45vw;
+    object-fit: cover;
+  }
+
+  .photoContainer div {
+    width: 92vw;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Видео */
+
+  .videoContainer ul {
+    flex-direction: column;
+    align-items: center;
+    width: 92vw;
+  }
+
+  .videoContainer li {
+    padding: 11px;
+    width: 76vw;
+    height: 38vw;
+  }
+
+  .video_item .play_button {
+    width: 28px;
+    height: 36px;
+    left: 64vw;
+    top: 127px;
+  }
+
+  .playlistContainer {
+    flex-direction: column;
+    padding-bottom: 6vh;
+  }
+
+  .playlistItem {
+    width: 88vw;
+    height: 80vh;
+  }
+
+  .playlistItem:first-child {
+    margin-bottom: 5vh;
+  }
+
+  .footer nav {
+    height: 10vh;
+  }
+
+}

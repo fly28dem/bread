@@ -41,6 +41,7 @@ header {
 }
 
 header nav {
+    position: relative;
     display: flex;
     height: 20vh;
     margin: auto;
@@ -57,9 +58,7 @@ header nav {
 
 header nav ul {
     display: flex;
-    padding: 0;
     height: 60px;
-    margin: auto;
     align-items: center;
     background-color: rgb(246, 244, 242);
     border-radius: 12px;
@@ -73,6 +72,9 @@ header nav li {
 }
 
 header nav img {
+    position: absolute;
+    top: 31%;
+    left: 31%;
     width: 64px;
     margin-top: 8px;
     border: 3px solid #866a5a;
@@ -119,6 +121,7 @@ main {
 .videoContainer ul {
     display: flex;
     justify-content: space-around;
+    gap: 7px;
     width: 75%;
 }
 
@@ -177,7 +180,6 @@ main {
 .playlistItem {
     width: 35vw;
     height: 21vw;
-    /* overflow: hidden; */
 }
 
 .playlistItem iframe {
