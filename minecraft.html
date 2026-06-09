@@ -4,37 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <title>Bread - Minecraft</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/preview.css">
-    <link rel="stylesheet" href="/styles/forLaptop.css">
-    <link rel="stylesheet" href="/styles/forMobile.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Bread — Майнкрафт</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/preview.css">
     
 </head>
 
 <body>
     <!-- Шапка -->
-    <header class="navContainer">
-        <nav>
-            <ul>
-                <!-- <li><img src="/assets/sad.jpg" alt="sad">Главная</li> -->
-                <li><a href="./index.html">Главная</a></li>
-                <li><a href="./minecraft.html">Майнкрафт</a></li>
-                <li><a href="./about.html">О сайте</a></li>
+    <header class="header">
+        <nav class="header__navigation">
+            <ul class="navigation__list">
+                <li><a class="navigation__item" href="./index.html">Главная</a></li>
+                <li><a class="navigation__item" href="./minecraft.html">Майнкрафт</a></li>
+                <li><a class="navigation__item" href="./about.html">О сайте</a></li>
             </ul>
         </nav>
     </header>
     <!-- Основной контент -->
     <main>
-        <section>
-            Minecraft
+        <!-- Раздел с фото -->
+        <section class="container">
+            <h1>Фотокарточки</h1>
+            <ul class="photo-container__list">
+                <img class="photo-container__item" src="./assets/minecraft_photo/1.png" alt="minecraft">
+                <img class="photo-container__item" src="./assets/minecraft_photo/2.png" alt="minecraft">
+                <img class="photo-container__item" src="./assets/minecraft_photo/3.png" alt="minecraft">
+                <img class="photo-container__item" src="./assets/minecraft_photo/4.png" alt="minecraft">
+                <img class="photo-container__item" src="./assets/minecraft_photo/5.png" alt="minecraft">
+                <img class="photo-container__item" src="./assets/minecraft_photo/6.png" alt="minecraft">
+            </ul>
         </section>
-        <footer>
+        <!-- <footer class="footer">
             <nav>
                 <span>&copy;2026, Последнее обновление: 15.04.2026</span>
             </nav>
-        </footer>
+        </footer> -->
 
     </main>
 </body>

@@ -1,26 +1,35 @@
+/* ------------------------------- */
+/* -------- Сброс и прочее ------- */
+/* ------------------------------- */
+
+/* шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background: linear-gradient(to bottom, #d3c0b5, rgb(220, 205, 196), rgb(188, 171, 161), rgb(177, 153, 138));
+    min-height: 100vh;
 }
 
 /* скрол бар */
-
 body::-webkit-scrollbar {
     width: 18px;
     background-color: rgb(192, 175, 165);
 }
-
 body::-webkit-scrollbar-thumb {
-    /* background-color: rgb(185, 158, 113); */
-    /* border-radius: 8px; */
-    /* border: 6px solid #d8ccaf; */
     border: 3px solid #efefef;
 }
 
-/* общие стили */
+/* ----------------------------- */
+/* -------- Общие стили -------- */
+/* ----------------------------- */
 
 h1 {
     margin: 30px 0 15px 0;
@@ -29,222 +38,262 @@ h1 {
     color: rgb(253, 253, 253);
 }
 
-.photoContainer, .videoContainer, .musicContainer{
-    padding: 10px 0;
-}
-
 a {
     text-decoration: none;
     color: rgb(64, 28, 11);
 }
 
-/* Шапка */
-
-header {
-    padding: 10px 15px;
-    background-color: rgb(220, 205, 196);
-    height: 20vh;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-header nav {
-    display: flex;
-    height: 100%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+/* ----------------------------- */
+/* ----- Шапка и навигация ----- */
+/* ----------------------------- */
+
+.header {
+    height: 15vh;
+    margin: 10px 15px;
     border-radius: 20px;
-
-    background-image: url(/assets/headerBackground.jpeg);
+    background-image: url(../assets/headerBackground.jpeg);
     background-position: center;
-    background-size: 44%;
-    font-family: "Montserrat", sans-serif;
-    font-size: 32px;
 }
 
-header nav ul {
+.header__navigation {
+    height: inherit;
+}
+
+.navigation__list {
+    height: inherit;
     display: flex;
-    height: 80px;
     align-items: center;
+    justify-content: center;
     gap: 30px;
-    /* border: 3px rgb(246, 244, 242) solid; */
-    /* border-radius: 16px; */
+    /* border: 2px solid rgb(119, 0, 255); */
 }
 
-header nav li {
-    text-decoration: none;
-    list-style-type: none;
-    padding: 12px 40px;
+.navigation__item {
+    display: flex;
+    padding: 1vh 2vw;
+    justify-content: center;
     border: 3px rgb(246, 244, 242) solid;
     border-radius: 16px;
+    color: rgb(246, 244, 242);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(28px, 2vw, 32px);
     transition: 0.1s;
-    background-color: rgba(1, 1, 1, );
+    transition-delay: 0.01s;
 }
 
-header nav li:hover {
+.navigation__item:hover {
+    color: rgb(67, 28, 7);
     background-color: rgb(246, 244, 242);
     cursor: pointer;
-    transition: 0.1s;
     transform: scale(105%);
+    transition: 0.1s;
+    transition-delay: 0.01s;
 }
 
-header nav li a {
-    color: rgb(246, 244, 242);
+/* Адаптив */
+
+@media screen and (max-width: 700px) { 
+    .header {
+        height: fit-content;
+    }
+    
+    .navigation__list {
+        flex-direction: column;
+        gap: 15px;
+        padding: 9px;
+    }
+
+    .navigation__item {
+        width: 88vw;
+        padding: 0.7vh 0;
+    }
 }
 
-header nav li:hover a {
-    color: rgb(67, 28, 7);
-}
+/* ----------------------------- */
+/* -------- Раздел с фото ------ */
+/* ----------------------------- */
 
-header nav li:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-header nav img {
-    width: 64px;
-    border: 3px solid #866a5a;
-    border-radius: 20px;
-}
-
-main {
-    margin: auto;
-}
-
-/* Раздел с фото */
-
-.photoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: #f2fcff;
-    background: linear-gradient(0deg, rgb(188, 171, 161) 0%, rgb(220, 205, 196) 100%);
-}
-
-.photoContainer img {
-    /* width: 590px; */
-    width: 30vw;
-    border-radius: 4px;
-}
-
-.photoContainer div {
+.photo-container__list {
     display: grid;
-    width: 90vw;
-    gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(177, 144, 126, 0.3);
 }
 
-/* Раздел с видео */
-
-.videoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(0deg, rgb(177, 153, 138) 0%, rgb(188, 171, 161) 100%);
-    width: 100%;
+.photo-container__item {
+    width: 23vw;
+    border-radius: 9px;
 }
 
-.videoContainer ul {
+/* Адаптив */
+
+@media screen and (max-width: 1100px) { 
+    .photo-container__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .photo-container__item {
+        width: 43vw;
+    }
+}
+
+@media screen and (max-width: 700px) { 
+    .photo-container__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .photo-container__item {
+        width: 83vw;
+    }
+}
+
+/* ----------------------------- */
+/* ------- Раздел с видео ------ */
+/* ----------------------------- */
+
+.video-container__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-around;
     justify-items: center;
-    gap: 7px;
+    gap: 7px 0.3vw;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(177, 144, 126, 0.3);
 }
 
-/* Другое отображение для ноутбучной версии */
-@media screen and (min-width: 751px) and (max-width: 1920px) {
-    .videoContainer ul {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.videoContainer li {
-    transition: 0.2s;
-    background-color: #9966CC;
-    background-size: 100%;
-    background-position: top center;
-    filter: contrast(85%);
+.video-container__item {
+    width: 13vw;
+    height: 13vh;
+    position: relative;
+    padding: 5px;
+    border-radius: 5% 10% 10% 15%;
     
     box-shadow: inset 0 3em 2em rgba(0, 0, 0, 0.7);
-    list-style-type: none;
-
-    border-radius: 5% 10% 10% 15%;
-    width: 300px;
-    height: 150px;
-    padding: 5px;
+    transition: 0.2s;
 }
 
-.videoContainer li:hover {
+.video-container__item:hover {
     transform: scale(101%);
     cursor: pointer;
-    filter: contrast(90%);
     border-radius: 3% 7% 7% 11%;
 }
 
-.videoContainer a {
-    text-decoration: none;
+@media screen and (max-width: 1600px) {
+    .video-container__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .video-container__item {
+        width: 26vw;
+        height: 23vh;
+    }
+
+    .video-button {
+        display: none;
+    }
 }
 
-/* Раздел с музыкой */
+@media screen and (max-width: 700px) {
 
-.musicContainer {
+    .video-container__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3vh;
+    }
+
+    .video-container__item {
+        width: 77vw;
+        height: 25vh;
+    }
+
+    .video-content__title {
+        font-size: 20px;
+        height: 46px;
+    }
+  
+}
+
+/* ----------------------------- */
+/* ------ Раздел с музыкой ----- */
+/* ----------------------------- */
+
+.playlist-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: linear-gradient(0deg, rgb(223, 189, 153) 0%, rgb(177, 153, 138) 100%);
+    gap: 5vh 1vw;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(212, 161, 147, 0.3)
 }
 
-.playlistContainer {
-    display: flex;
-    gap: 10vw;
-    padding-bottom: 100px;
-}
-
-.playlistContainer h2 {
-    background: linear-gradient(0deg, rgb(176, 123, 108) 0%, rgb(219, 143, 123) 100%);
-    font-family: "Montserrat", sans-serif;
-    color: rgb(250, 250, 250);
+.playlist-container__title {
     padding: 10px 0 2px 10px;
     border-radius: 12px 12px 0 0;
+    color: rgb(250, 250, 250);
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
+    background: linear-gradient(0deg, rgb(176, 123, 108) 0%, rgb(219, 143, 123) 100%);
 }
 
-.playlistItem {
-    width: 35vw;
-    height: 21vw;
+.playlist-container__item {
+    width: 25vw;
+    height: 66vh;
 }
 
-.playlistItem iframe {
+.playlist-container__item iframe {
     width: 100%;
     height: 100%;
     border-radius: 0 0 12px 12px;
     margin-right: -20px;
 }
 
-footer {
-    padding: 5px 15px;
-    background-color: rgb(223, 189, 153);
+@media screen and (max-width: 1000px) {
+
+  .playlist-container {
+    flex-direction: column;
+    padding-bottom: 6vh;
+  }
+
+  .playlist-container__item  {
+    width: 81vw;
+    height: 74vh;
+  }
+
+  .playlist-container__item:first-child {
+    margin-bottom: 5vh;
+  }
 }
 
-footer nav {
+/* ----------------------------- */
+/* ----------- Подвал ---------- */
+/* ----------------------------- */
+
+.footer {
+    padding: 5px 15px;
+    margin-top: 12vh;
+}
+
+.footer nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-left: 20px;
     width: 100%;
     height: 8vh;
-    background: #DDAA8C;
-    background: radial-gradient(circle, rgb(202, 153, 125) 20%, rgb(186, 146, 117) 100%);
+    /* background: #DDAA8C; */
+    /* background: radial-gradient(circle, rgba(196, 156, 133, 0.8) 20%, rgba(184, 147, 121, 0.8) 100%); */
     background-size: 100%;
     background-position: center;
     border-radius: 12px;
 }
 
-footer span {
+.footer span {
     color: whitesmoke;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }

@@ -1,43 +1,48 @@
 .preview_mlp {
-    background: url(/assets/video_preview/mlp_pr.jpg);
+    background: url(../assets/video_preview//mlp_pr.jpg);
 }
 
 .preview_merlin {
-    background: url(/assets/video_preview/merlin_pr.png);
+    background: url(../assets/video_preview/merlin_pr.png);
 }
 
 .preview_harry {
-    background: url(/assets/video_preview/harry_pr.png);
+    background: url(../assets/video_preview/harry_pr.png);
 }
 
 .preview_brbad {
-    background: url(/assets/video_preview/brbad_pr.png);
+    background: url(../assets/video_preview/brbad_pr.png);
 }
 
 .preview_br2_11 {
-    background: url(/assets/video_preview/br_2_11.png);
+    background: url(../assets/video_preview/br_2_11.png);
 }
 
-.video_item {
+.preview {
+    background-color: #9966CC;
+    background-size: 101%;
+    background-position: center;
+}
+
+.video-content {
     position: relative;
-    
 }
 
-.video_item p {
+.video-content__title {
     color: rgb(245, 245, 245);
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
 
-    height: 43px;
+    height: 36px;
     overflow: hidden;
     z-index: 1;
 }
 
-.video_item .play_button {
+.video-content .video-button {
     position: absolute;
-    left: 251px;
-    top: 101px;
-    width: 24px;
-    height: 30px;
+    left: 11vw;
+    top: 9vh;
+    width: 1vw;
+    height: 2.3vh;
     z-index: 0;
 }

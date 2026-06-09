@@ -4,37 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <title>Bread - About</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/preview.css">
-    <link rel="stylesheet" href="/styles/forLaptop.css">
-    <link rel="stylesheet" href="/styles/forMobile.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Bread — О сайте</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/preview.css">
     
 </head>
 
 <body>
     <!-- Шапка -->
-    <header class="navContainer">
-        <nav>
-            <ul>
-                <!-- <li><img src="/assets/sad.jpg" alt="sad">Главная</li> -->
-                <li><a href="./index.html">Главная</a></li>
-                <li><a href="./minecraft.html">Майнкрафт</a></li>
-                <li><a href="./about.html">О сайте</a></li>
+    <header class="header">
+        <nav class="header__navigation">
+            <ul class="navigation__list">
+                <li><a class="navigation__item" href="./index.html">Главная</a></li>
+                <li><a class="navigation__item" href="./minecraft.html">Майнкрафт</a></li>
+                <li><a class="navigation__item" href="./about.html">О сайте</a></li>
             </ul>
         </nav>
     </header>
     <!-- Основной контент -->
     <main>
-        <section>
-            About
+         <!-- Раздел с видео -->
+        <section class="container">
+            <h1>Закладки</h1>
+            <ul class="video-container__list">
+                <a class="video-container__item preview_mlp preview" href="https://thedoctorteam.ru/project/mlp/season-5">
+                    <li>
+                        <div class="video-content">
+                            <p class="video-content__title">My Little Pony: Friendship is magic</p>
+                            <img class="video-button" src="./assets/video_preview/play_button.png" alt="play button">
+                        </div>
+                    </li>
+                </a>
+                <a class="video-container__item preview_merlin preview" href="https://mz.lordfilm133.ru/serialy/19820-merlin-2008.html">
+                    <li>
+                        <div class="video-content">
+                            <p class="video-content__title">Мерлин смотреть онлайн бесплатно в хорошем HD качестве</p>
+                            <img class="video-button" src="./assets/video_preview/play_button.png" alt="play button">
+                        </div>
+                    </li>
+                </a>
+                <a class="video-container__item preview_harry preview" href="https://garry-poter-lordfilm.ru/filosofskiy-kamen-1-2001-lord/">
+                    <li>
+                        <div class="video-content">
+                            <p class="video-content__title">Гарри Поттер и Философский Камень (2001) Смотреть Онлайн Бесплатно в Хорошем Качестве
+                                1080 HD
+                                на Русском Языке - ЛордФильм</p>
+                            <img class="video-button" src="./assets/video_preview/play_button.png" alt="play button">
+                        </div>
+                    </li>
+                </a>
+                <a class="video-container__item preview_brbad preview" href="https://www.mirabreakingbad.com/">
+                    <li>
+                        <div class="video-content">
+                            <p class="video-content__title">Во все тяжкие</p>
+                            <img class="video-button" src="./assets/video_preview/play_button.png" alt="play button">
+                        </div>
+                    </li>
+                </a>
+                <a class="video-container__item preview_br2_11 preview" href="https://www.mirabreakingbad.com/episodes/br-2-season-13-seriya/">
+                    <li>
+                        <div class="video-content">
+                            <p class="video-content__title">Во все тяжкие последняя серия, на которой я остановился</p>
+                            <img class="video-button" src="./assets/video_preview/play_button.png" alt="play button">
+                        </div>
+                    </li>
+                </a>
+            </ul>
         </section>
-        <footer>
+        <!-- <footer class="footer">
             <nav>
-                <span>&copy;2026, Последнее обновление: 15.04.2026</span>
+                <span>2026, Bread — Бытовой сайт.</span>
             </nav>
-        </footer>
+        </footer> -->
 
     </main>
 </body>
